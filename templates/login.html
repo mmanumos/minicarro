@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Minicarro - Login {% endblock %}
+
+{% block header_title %} {% endblock%}
+
+{% block button %}{% endblock %}
+{% block navbar %} {% endblock %}
+
+{% block content %}
+<div class="login">
+    <form method="POST" class="login_form">
+        <h1> Iniciar sesión </h1>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Login</button>
+    </form>
+    <a href="/register">Crear cuenta</a>
+</div>
+{% endblock %}
