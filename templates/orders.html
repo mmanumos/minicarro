@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Mis ordenes {% endblock %}
+
+{% block header_title %} Mis ordenes {% endblock%}
+{% block cart %}{% endblock %}
+
+{% block content %}
+{% for order in orders %}
+<div class='reports__item' ">
+    <img class='reports__item--img' src='/static/img/order.png' alt='report'>
+    <div class='reports_item--description'>
+        <h2> <a href=" /view_order/{{order.id}}">Orden no. {{ order.id }}</a></h2>
+</div>
+<div class='reports_item--description'>
+    <h2>Estado</h2>
+    {% if order.status == 0 %}
+    <p>Por pagar</p>
+    {% else %}
+    <p>Pagada</p>
+    {% endif %}
+</div>
+<a class='button button_a button_add' href='/view_order/{{order.id}}'>Ver</a>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block modal_add %}{% endblock %}

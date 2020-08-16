@@ -15,14 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from products.views.home import home
 from products.views.login import login, register, logout
+from products.views.home import home
+from products.views.orders import create_order, orders, view_order, pay_order
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
-    path('home/', home, name='home'),
     path('login/', login, name='login'),
     path('logout/', logout, name='logout'),
     path('register/', register, name='register'),
+    path('', home, name='home'),
+    path('home/', home, name='home'),
+    path('create_order/', create_order, name='create_order'),
+    path('orders/', orders, name='orders'),
+    path('view_order/<int:id>', view_order, name='view_order'),
+    path('pay_order/', pay_order, name='pay_order'),
 ]
