@@ -1,0 +1,499 @@
+body {
+    margin: 0px;
+    background: linear-gradient(#607196, #21c088 );
+    padding: 0px;
+    font-family: 'Muli', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 15px;
+    background-color: #607196;
+  }
+  
+  .header__img {
+    margin-left: 30px;
+    margin-top: 0px;
+    width: 130px;
+    height: 70px;
+  }
+  
+  .header__menu {
+    margin-right: 30px;
+  }
+  
+  .header__menu ul {
+    display: none;
+    list-style: none;
+    padding: 5px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+    background-color: rgb(33, 191, 136, 0.9);
+    border: 1px solid white;
+  }
+  
+  .header__menu:hover ul,
+  ul:hover {
+    display: block;
+  }
+  
+  .header__menu li {
+    margin: 10px 0px;
+  }
+  
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .header__menu--profile {
+    margin-right: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__menu--profile a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .header__menu--profile a:hover{
+    text-decoration: underline;  
+  }
+
+  .header__menu--profile img {
+    margin-right: 8px;
+    width: 25px;
+  }
+  
+  .header__menu--profile p {
+    margin: 0px;
+    color: white;
+  }
+    
+.header_products {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+  .main__title {
+    color: white;
+    font-size: 25px;
+  }
+
+
+.login {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    min-height: calc(105vh - 200px);
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    color: white;
+    font-weight: bold;
+}
+  
+  .categories__title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+    margin-top: -120px;
+  }
+  
+  .input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    padding: 0px 20px;
+    width: 50%;
+    margin-top: 6px;
+    outline: none;
+  }
+  
+  ::placeholder {
+    color: white;
+  }
+
+
+.textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  width: 50%;
+  height: 50px;
+  margin-top: 10px;
+  outline: none;
+}
+
+  /* Footer */
+  .footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.footer a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/*general report*/
+/*general report*/
+.reports {
+    width: 90%;
+    min-height: 400px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reports__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid white;
+    color: white;
+    padding: 5px;
+}
+
+
+
+.reports__item--img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.reports_item--description h2,
+.reports_item--description h2 a{
+    margin: 0px;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+}
+
+.reports_item--description p {
+  width: 200px;
+}
+
+.reports_item--description h2 a:hover{
+  text-decoration: underline;
+}
+
+.reports__item--comments {
+    border: 1px solid black;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 5px;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 30px;
+    width: 25%;
+    letter-spacing: 1px;
+    margin: 15px 60px;
+}
+
+.button_a {
+  text-align: center;
+  height: 25px;
+  width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+/* Home reports*/
+.button_new {
+  position: absolute;
+  right: 15px;
+}
+
+.button_form--header{
+  right: 300px;
+}
+
+
+/*Form report*/
+.form {
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 30px;
+  min-height: 250px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.form__header {
+  width: 40%;
+}
+
+.form__header h1{
+  font-size: 18px;
+  text-align: center;
+  background-color: rgba(96, 113, 150, 0.6);
+  padding: 10px;
+  border-radius: 25%;
+}
+
+.form__header h1 > span{
+  border: 1px solid white;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 7px;
+  padding: 3px;
+}
+
+.form__header h1 > span:hover{
+  cursor: pointer;
+}
+
+.form > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: black;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  padding: 0px 20px;
+  width: 40%;
+  margin-top: 10px;
+}
+
+.form_element {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form_element input{
+  margin-left: 60px;
+}
+
+.form_element select{
+  margin-left: 110px;
+}
+
+.form_element textarea{
+  margin-left: 90px;
+}
+
+.form_element button{
+  width: 100px;
+}
+
+.form_element--p {
+  margin: 0;
+  margin-right: 50px;
+}
+
+.form_element--complement {
+  margin-right: -30px;
+}
+
+.button_save {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.selected_div{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  width: 50%;
+  margin-top: 10px;
+  outline: none;
+}
+
+#selected_headers{
+  min-height: 70px;
+  margin-left: 85px;
+}
+
+#selected_filters{
+  min-height: 70px;
+  margin-left: 85px;
+}
+
+/*Modal window*/
+#modal_add {
+  width: 20%;
+  height: 30%;
+  background: linear-gradient(#607196, #21c088 );
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  left: 100;
+  top: 0;
+  margin-top: 200px;
+  margin-left: 900px;
+  overflow: auto;
+}
+
+#modal_add > span{
+  cursor: pointer;
+}
+
+#modal_products {
+  width: 40%;
+  min-height: 30%;
+  background: linear-gradient(#607196, #21c088 );
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  right: 180px;
+  top: 0;
+  margin-top: 150px;
+  margin-left: 900px;
+  overflow: auto;
+}
+
+.modal_products--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal_products--header > span {
+    cursor: pointer;
+}
+
+
+
+
+/* order */
+.table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  width: 100%;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even){
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table tr:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #607196;
+  color: white;
+}
+
+.button_table {
+  margin: 0px;
+}
+
+
+.form__input {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.form__select {
+  padding: 10px;
+  width: 87%;
+  margin-bottom: 10px;
+}

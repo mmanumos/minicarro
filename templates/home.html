@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} Productos {% endblock %}
+
+{% block header_title %} Productos {% endblock%}
+{% block cart %}
+<div>
+    <button class='button button_a' id="open_order">Ver carrito</button>
+</div>
+<div id="modal_products">
+    <div class="modal_products--header">
+        <span id="close_order">X</span>
+        <h3>Mi orden</h3>
+    </div>
+    <table class="table" border="2">
+        <thead>
+            <tr>
+                <th>Cant</th>
+                <th>Producto</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_products">
+
+        </tbody>
+    </table>
+    <div>
+        <button class="button button_a" id="clean_cart">Vaciar carrito</button>
+        <button class="button button_a">Confirmar orden</button>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+{% for product in products %}
+<div class='reports__item' id="{{ product.id }}" data-name="{{ product.name }}">
+    <img class='reports__item--img' src='/static/img/article.png' alt='report'>
+    <div class='reports_item--description'>
+        <h2> <a href="/edit_report/{{report.id}}">{{ product.name }}</a></h2>
+        <p> Description: {% if product.description is None %} Sin descripción {% else %} {{ product.description }}
+            {% endif %}</p>
+
+    </div>
+    <button class='button button_a button_add' href=''>Agregar</button>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block modal_add %}
+<div id="modal_add">
+    <input type="hidden" id="id_product">
+    <span id="btn_modal_add--close">X</span>
+    <p> Producto: <span id="name_product"></span> </p>
+    <label for="">Cantidad</label>
+    <input class="input" type="number" id="cant_product">
+    <button class='button button_a' id="charge_product">Cargar al carrito</button>
+</div>
+{% endblock %}

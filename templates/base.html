@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/styles/index.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>{% block title %} Base {% endblock %}</title>
+</head>
+
+<body>
+    {% block navbar %}
+    <header class="header">
+        <img class="header__img" src="{% static 'img/useit.png'  %}" alt="Logo Use it">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="{% static 'img/products.png'  %}" alt="Products">
+                <a href="/home/">Productos</a>
+            </div>
+        </div>
+
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="{% static 'img/user.png'  %}" alt="User">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+        </div>
+    </header>
+    {% endblock %}
+    <div class="header_products">
+        <h1 class="main__title">{% block header_title %} Base {% endblock %}</h1>
+        {% block cart %}{% endblock %}
+    </div>
+
+    <div class="reports">
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <a href="#">Terminos de uso</a>
+        <a href="#">Políticas de privaciad</a>
+        <a href="#">Centro de ayuda</a>
+    </footer>
+
+    {% block modal_add %}
+    {% endblock %}
+</body>
+
+{% load static %}
+{% block script %}
+<script type="text/javascript" src="{% static '/scripts/base.js' %}"></script>
+{% endblock %}
+
+</html>
