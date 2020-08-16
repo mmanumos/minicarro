@@ -24,7 +24,7 @@ compra y cancelar, o limpiar carrito)
 ## Instalación de framework y dependencias
 Preferiblemente use un entorno virtual con la versión de Python antes indicada, activelo y ejecute el siguiente comando:
 
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 
 ## La aplicación funciona de la siguiente manera:
 
