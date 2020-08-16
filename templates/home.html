@@ -26,7 +26,7 @@
     </table>
     <div>
         <button class="button button_a" id="clean_cart">Vaciar carrito</button>
-        <button class="button button_a">Confirmar orden</button>
+        <button class="button button_a" id="confirm_order">Confirmar orden</button>
     </div>
 </div>
 
@@ -35,15 +35,15 @@
 
 {% block content %}
 {% for product in products %}
-<div class='reports__item' id="{{ product.id }}" data-name="{{ product.name }}">
+<div class='reports__item' data-id_product="{{ product.id }}" data-name="{{ product.name }}">
     <img class='reports__item--img' src='/static/img/article.png' alt='report'>
     <div class='reports_item--description'>
-        <h2> <a href="/edit_report/{{report.id}}">{{ product.name }}</a></h2>
-        <p> Description: {% if product.description is None %} Sin descripción {% else %} {{ product.description }}
+        <h2> {{ product.name }}</h2>
+        <p> Descripción: {% if product.description is None %} Sin descripción {% else %} {{ product.description }}
             {% endif %}</p>
 
     </div>
-    <button class='button button_a button_add' href=''>Agregar</button>
+    <button class='button button_a button_add'>Agregar</button>
 </div>
 
 {% endfor %}
