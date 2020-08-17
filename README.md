@@ -35,7 +35,12 @@ pip3 install -r requirements.txt
 ### 2do
 - En el navegador digitar la url: http://localhost:8000/ este lo dirigirá a la página del login
 
-## Usuarios de prueba:
+## Demo:
+
+ Puede utilizar la aplicación en la siguiente url:  http://34.71.55.165:8000/
+
+ Aqui puede crear su cuenta o utilizar los siguientes usuarios de prueba:
+
 - manuel - mmanumos
 - meri - mmanumos
 
