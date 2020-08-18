@@ -37,7 +37,7 @@ pip3 install -r requirements.txt
 
 ## Demo:
 
- Puede utilizar la aplicación en la siguiente url:  http://34.71.55.165:8000/
+ Puede utilizar la aplicación en la siguiente url:  http://35.239.166.35:8000/
 
  Aqui puede crear su cuenta o utilizar los siguientes usuarios de prueba:
 
